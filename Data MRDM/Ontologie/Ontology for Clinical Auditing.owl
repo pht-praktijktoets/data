@@ -1,0 +1,1296 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://fair.dica.nl/oca#"
+     xml:base="http://fair.dica.nl/oca"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:oca="http://fair.dica.nl/oca/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:oca1="http://purl.obolibrary.org/oca/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/oca">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro/core.owl"/>
+        <dc:creator>M. Nieuwland</dc:creator>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000600 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000600"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
+        <rdfs:isDefinedBy rdf:resource="http://www.geneontology.org/formats/oboInOwl#"/>
+        <rdfs:label xml:lang="en">database_cross_reference</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000056"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000087 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000087"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0003303 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003303">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000039"/>
+        <obo:IAO_0000115 xml:lang="en">A relationship between an entity (e.g. a genotype, genetic variation, chemical, or environmental exposure) and a condition (a phenotype or disease), where the entity has some causal role for the condition.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
+        <rdfs:label xml:lang="nl">veroorzaakt conditie of ziekte</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000010 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000010">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000011"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/oca/OCA_0000012"/>
+        <obo:IAO_0000115>De relatie tussen een aandoening en de processen die uitgevoerd worden om de aandoening te genezen en/of de symptomen of klachten die veroorzaakt worden door de aandoening te elimineren of verlichten.</obo:IAO_0000115>
+        <rdfs:label xml:lang="nl">wordt behandeld door</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000011 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000011">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:label xml:lang="nl">gericht op aandoening</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000039 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000039">
+        <rdfs:label xml:lang="en">caused by</rdfs:label>
+        <rdfs:label xml:lang="nl">gevolg van</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000043 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000043">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="nl">relevant voor proces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000044 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000044">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000043"/>
+        <rdfs:label xml:lang="nl">relevant voor start proces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000045 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000045">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000043"/>
+        <rdfs:label xml:lang="nl">relevant voor afloop proces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000049 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000049">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000092"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/oca/OCA_0000004"/>
+        <rdfs:label xml:lang="nl">aandoening van</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000052">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:IAO_0000115 xml:lang="nl">relatie tussen het proces waarin kwaliteiten zijn vastgesteld (i.c. gemeten) en die kwaliteit. Dus het gewicht van een patient dat is vastgesteld tijdens een intake process.
+Behoeft nadere discussie</obo:IAO_0000115>
+        <rdfs:label xml:lang="nl">kwaliteit vastgesteld tijdens</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000066 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000066">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/oca/OCA_0000035"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:label xml:lang="nl">identifier van</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000067 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000067">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/oca/OCA_0000035"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:label xml:lang="nl">id uitgegeven door</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000007 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000007">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/oca/OCA_0000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="nl">overlijdensdatum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000020 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000020">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/oca/OCA_0000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="nl">geboortedatum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000032 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000032">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/oca/OCA_0000006"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <obo:IAO_0000115 xml:lang="nl">Datum waarop de operatie gestart is. Als start van de operatie wordt het moment van aanprikken, huidincisie, of -punctie gehanteerd.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="nl">NHR handboek</obo:IAO_0000119>
+        <rdfs:label xml:lang="nl">operatiedatum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000042 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000042">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/oca/OCA_0000036"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="nl">meetdatum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000048 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000048">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/oca/OCA_0000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="nl">achternaam</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000056 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000056">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="nl">Charlson Comorbidity points</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000064 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000064">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/oca/OCA_0000065"/>
+        <rdfs:label xml:lang="nl">patient id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000068 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/oca/OCA_0000068">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/oca/OCA_0000004"/>
+        <rdfs:label xml:lang="nl">initialen</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000038"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="en">lymphoma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_10969 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_10969">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="en">hemiplegia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_1240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1240">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="en">leukemia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_1307 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1307">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="nl">dementie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_224 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_224">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_6713"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="nl">TIA</rdfs:label>
+        <rdfs:label xml:lang="en">transient ischemic attack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_3083 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3083">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="nl">COPD</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_341 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_341">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="en">peripheral vascular disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_409 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_409">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="en">liver disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_5844 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_5844">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="nl">myocard infarct</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_6000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_6000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="en">congestive heart failure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_635 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_635">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="nl">AIDS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_65 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_65">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="en">connective tissue disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_6713 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_6713">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="nl">CVA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_750 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_750">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="en">peptic ulcer disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_784 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_784">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="en">chronic kidney disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_9351 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9351">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
+        <rdfs:label xml:lang="nl">diabetes mellitus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000115 rdf:resource="http://obi-ontology.org/"/>
+        <obo:IAO_0000115 xml:lang="en">An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members.</obo:IAO_0000115>
+        <rdfs:label xml:lang="nl">organisatie</rdfs:label>
+        <rdfs:label xml:lang="en">organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/oca/OCA_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
+        <obo:IAO_0000600 xml:lang="nl">Een aandoening is altijd de aandoening van iemand (een persoon). Voorbeeld: de blinde darm ontsteking van mevrouw De Vries</obo:IAO_0000600>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/64572001"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf"/>
+        <rdfs:label xml:lang="nl">aandoening</rdfs:label>
+        <rdfs:label xml:lang="en">disease</rdfs:label>
+        <skos:prefLabel xml:lang="nl">aandoening</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">A material entity which is clinically abnormal and part of an extended organism. Disorders are the physical basis of disease.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf"/>
+        <rdfs:label xml:lang="nl">afwijking</rdfs:label>
+        <rdfs:label xml:lang="en">disorder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/oca/OCA_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/oca/OCA_0000008"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="nl">Het proces van medisch handelen gericht op de behandeling en/of diagnose van een aandoending, danwel op het voorkomen van (een) aandoening(en).</obo:IAO_0000115>
+        <rdfs:label xml:lang="nl">medisch proces</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000003">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000039"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/oca/OCA_0000001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 xml:lang="nl">Een complicatie is een aandoening die veroorzaakt is door een (medische) behandeling of ingreep</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/116223007"/>
+        <rdfs:label xml:lang="nl">complicatie</rdfs:label>
+        <rdfs:label xml:lang="en">complication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <obo:IAO_0000115 xml:lang="nl">Een persoon (wetenschappelijke naam: Homo sapiens) is een tweevoetige primatensoort uit de familie Hominidae.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="nl">Goodman et al. (1990)</obo:IAO_0000119>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/125676002"/>
+        <rdfs:label xml:lang="en">person</rdfs:label>
+        <rdfs:label xml:lang="nl">persoon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000001"/>
+        <rdfs:label xml:lang="nl">diagnostisch proces</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000012"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/oca/OCA_0000037"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="nl">Een operatie is het proces dat plaatsvindt rondom een of meerdere operatieve ingrepen. Het proces start met de eerste medische handeling die verricht wordt op dezelfde locatie als de operatieve ingre(e)p(en) - denk aan een (poliklinische) operatiekamer. Het proces eindigt met de voltooing van de laatste medische handeling op die locatie.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="nl">Onderdeel van een operatie zijn bijvoorbeeld toedienen van anaesthesie en het desinficteren van het opratieve gebied. Het schoonmaken van een OK na afloop van de operatie behoort niet hiertoe, aangezien dat geen medische handeling betreft.</obo:IAO_0000600>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/387713003"/>
+        <rdfs:label xml:lang="nl">operatie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:label xml:lang="nl">patient rol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:label xml:lang="nl">zorgverlener rol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/oca/OCA_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/oca/OCA_0000009"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000011"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="nl">Een behandelings is een medische handeling die verricht wordt met de intentie om een aandoening te herstellen en/of de klachten/symptomen die het gevolg zijn van die aandoening te verhelpen of verlichten.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="nl">Een behandeling kan onderdeel zijn van een andere (overkoepelende) behandeling. Bijvoorbeeld een radiotherapeutische behandeling kan naast een operatie, onderdeel zijn van een behandeling tegen kanker.</obo:IAO_0000600>
+        <rdfs:label xml:lang="nl">behandeling</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/OAE_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000012"/>
+        <rdfs:label xml:lang="nl">systemische behandeling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000013"/>
+        <rdfs:label xml:lang="nl">chemotherapie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000012"/>
+        <rdfs:label xml:lang="nl">radiotherapie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:label xml:lang="nl">administratief gegeven</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000016"/>
+        <rdfs:label xml:lang="nl">diagnose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/40388003"/>
+        <rdfs:label xml:lang="en">implant</rdfs:label>
+        <rdfs:label xml:lang="nl">implantaat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000001"/>
+        <rdfs:label xml:lang="nl">preventief proces</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <obo:IAO_0000115 xml:lang="nl">De tijd gedurende welke een persoon is opgenomen in een ziekenhuis. Deze start met een opname (moment) en eindigt met ontslag of het overlijden van de opgenomen persoon.</obo:IAO_0000115>
+        <rdfs:label xml:lang="nl">opname periode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/oca/OCA_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="nl">overlijden</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000016"/>
+        <obo:IAO_0000115 xml:lang="nl">niveau binnen een trapsgewijze indeling</obo:IAO_0000115>
+        <rdfs:label xml:lang="nl">gradatie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000023"/>
+        <rdfs:label xml:lang="nl">gradatie van adverse events</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000046"/>
+        <rdfs:label xml:lang="en">hospital</rdfs:label>
+        <rdfs:label xml:lang="nl">ziekenhuis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000027">
+        <rdfs:subClassOf rdf:resource="http://www.dica.nl/ontologie/dasa/DASA_0000010"/>
+        <rdfs:label xml:lang="nl">ongedifferentieerd</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000012"/>
+        <rdfs:label xml:lang="nl">dieet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000012"/>
+        <rdfs:label xml:lang="nl">medicatie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000029"/>
+        <rdfs:label xml:lang="nl">orale medicatie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000051"/>
+        <rdfs:label xml:lang="nl">follow up</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000036"/>
+        <obo:IAO_0000115 xml:lang="nl">Gewicht van een persoon, uitgedrukt in kilogrammen.</obo:IAO_0000115>
+        <rdfs:label xml:lang="nl">gewicht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000036"/>
+        <obo:IAO_0000115 xml:lang="nl">Lengte van een persoon, uitgedrukt in meters.</obo:IAO_0000115>
+        <rdfs:label xml:lang="nl">lengte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:label xml:lang="nl">identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/oca/OCA_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/oca/OCA_0000008"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000042"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="nl">gemeten patient eigenschap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000012"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/oca/OCA_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/oca/OCA_0000038"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="nl">operatieve interventie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000009"/>
+        <rdfs:label xml:lang="nl">operateur rol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000012"/>
+        <obo:IAO_0000115 xml:lang="nl">Het bewust niet behandelen van een aandoening wordt gezien als een behandeling van deze klasse.</obo:IAO_0000115>
+        <rdfs:label xml:lang="nl">wait and see</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000046 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000046">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
+        <rdfs:label xml:lang="en">care institution</rdfs:label>
+        <rdfs:label xml:lang="nl">zorginstelling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000045"/>
+        <rdfs:label xml:lang="nl">tumor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000050 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000051"/>
+        <rdfs:label xml:lang="nl">intake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000005"/>
+        <rdfs:label xml:lang="nl">vaststellen toestand patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000053 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000053">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <rdfs:label xml:lang="nl">solid tumor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000054 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000054">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000053"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">localized tumor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000055 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000055">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000053"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">metastatic tumor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000057">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_409"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="nl">mild liver disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_409"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="nl">moderate to severe liver disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_9351"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="nl">uncomplicated diabetes mellitus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_9351"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/oca/OCA_0000056"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="nl">end-organ damage diabetes mellitus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000061">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000051"/>
+        <rdfs:label xml:lang="nl">ontslag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000012"/>
+        <rdfs:label xml:lang="nl">adjuvante behandeling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000062"/>
+        <rdfs:label xml:lang="nl">neo-adjuvante behandeling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/oca/OCA_0000065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/oca/OCA_0000065">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/oca/OCA_0000035"/>
+        <rdfs:label xml:lang="nl">patient identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dica.nl/ontologie/dasa/DASA_0000010 -->
+
+    <owl:Class rdf:about="http://www.dica.nl/ontologie/dasa/DASA_0000010"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/oca/OCA_0000005"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/oca/OCA_0000012"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/oca/OCA_0000019"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

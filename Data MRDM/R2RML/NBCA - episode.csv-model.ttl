@@ -1,0 +1,610 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix dica: <http://purl.obolibrary.org/oca/dica/> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix icd10: <http://purl.bioontology.org/ontology/ICD10/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix oca: <http://fair.dica.nl/oca/> .
+@prefix oca1: <http://purl.obolibrary.org/oca/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1edghlti0x1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "NBCA - episode.csv" ;
+	km-dev:modelPublicationTime "1595062023744"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"episode-upn\"}],[{\"columnName\":\"menopstatus\"}],[{\"columnName\":\"who\"}],[{\"columnName\":\"neoadjther\"}],[{\"columnName\":\"tumor\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"tumor_uri\"}],[{\"columnName\":\"menopstatus\"}],[{\"columnName\":\"who\"}],[{\"columnName\":\"neoadjther\"}],[{\"columnName\":\"episode_uri\"}]]" ;
+	km-dev:hasModelLabel "NBCA - episode.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"episode-upn\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"episode_uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"value = getValue(\\\"episode-upn\\\")\\nif value:\\n    return 'http://data.dica.nl/nbca/episode/' + value\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"episode-upn\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"episode_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"tumor\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"tumor_uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"value = getValue(\\\"tumor\\\")\\nif value:\\n    return 'http://data.dica.nl/nbca/tumor/' + value\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"tumor\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"tumor_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"episode_uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://purl.obolibrary.org/oca/dica/DICA_0000102\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://purl.obolibrary.org/oca/dica/DICA_00001021\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/dica/DICA_0000102\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/dica/DICA_00001021\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"dica:DICA_00001021 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"episode_uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"episode_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"tumor_uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://purl.obolibrary.org/oca/OCA_0000047\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://purl.obolibrary.org/oca/OCA_00000471\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/OCA_0000047\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/OCA_00000471\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"oca1:OCA_00000471 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"tumor_uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"tumor_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"menopstatus\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/dica/DICA_0000102\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/dica/DICA_00001021\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://purl.obolibrary.org/oca/dica/DICA_0000103\",
+                    \"DomainLabel\": \"dica:DICA_00001021\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:string\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"menopstatus\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"menopstatus\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"who\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/dica/DICA_0000102\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/dica/DICA_00001021\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://purl.obolibrary.org/oca/dica/DICA_0000104\",
+                    \"DomainLabel\": \"dica:DICA_00001021\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:string\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"who\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"who\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"neoadjther\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/dica/DICA_0000102\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/dica/DICA_00001021\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://purl.obolibrary.org/oca/dica/DICA_0000105\",
+                    \"DomainLabel\": \"dica:DICA_00001021\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:string\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"neoadjther\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"neoadjther\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://purl.obolibrary.org/oca/dica/DICA_00001021\",
+                    \"edgeId\": \"http://purl.obolibrary.org/obo/RO_0000056\",
+                    \"edgeTargetUri\": \"http://purl.obolibrary.org/oca/dica/DICA_0000102\",
+                    \"edgeSourceId\": \"http://purl.obolibrary.org/oca/OCA_00000471\",
+                    \"edgeSourceUri\": \"http://purl.obolibrary.org/oca/OCA_0000047\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_35d709d9-bce8-4731-ab30-745efc174841 a rr:TriplesMap .
+
+_:node1edghlti0x1 km-dev:hasTriplesMap km-dev:TriplesMap_35d709d9-bce8-4731-ab30-745efc174841 .
+
+km-dev:TriplesMap_35d709d9-bce8-4731-ab30-745efc174841 km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x2 rr:tableName "NBCA - episode.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x1 km-dev:hasLogicalTable _:node1edghlti0x2 .
+
+km-dev:TriplesMap_35d709d9-bce8-4731-ab30-745efc174841 rr:logicalTable _:node1edghlti0x2 ;
+	rr:subjectMap _:node1edghlti0x3 .
+
+_:node1edghlti0x1 km-dev:hasSubjectMap _:node1edghlti0x3 .
+
+_:node1edghlti0x3 km-dev:isPartOfMapping _:node1edghlti0x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://purl.obolibrary.org/oca/dica/DICA_00001021" ;
+	rr:class dica:DICA_0000102 ;
+	rr:template "{episode_uri}" .
+
+km-dev:PredicateObjectMap_aaddda2c-b898-44d2-a981-8ae8fa910d26 rr:predicate dica:DICA_0000103 .
+
+_:node1edghlti0x4 rr:column "menopstatus" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#string" ;
+	km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x1 km-dev:hasObjectMap _:node1edghlti0x4 .
+
+km-dev:PredicateObjectMap_aaddda2c-b898-44d2-a981-8ae8fa910d26 rr:objectMap _:node1edghlti0x4 .
+
+km-dev:TriplesMap_35d709d9-bce8-4731-ab30-745efc174841 rr:predicateObjectMap km-dev:PredicateObjectMap_aaddda2c-b898-44d2-a981-8ae8fa910d26 .
+
+km-dev:PredicateObjectMap_aaddda2c-b898-44d2-a981-8ae8fa910d26 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_aaddda2c-b898-44d2-a981-8ae8fa910d26 .
+
+km-dev:PredicateObjectMap_c6d642b4-c70c-4af1-bfc1-5a1f83fae583 rr:predicate dica:DICA_0000104 .
+
+_:node1edghlti0x5 rr:column "who" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#string" ;
+	km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x1 km-dev:hasObjectMap _:node1edghlti0x5 .
+
+km-dev:PredicateObjectMap_c6d642b4-c70c-4af1-bfc1-5a1f83fae583 rr:objectMap _:node1edghlti0x5 .
+
+km-dev:TriplesMap_35d709d9-bce8-4731-ab30-745efc174841 rr:predicateObjectMap km-dev:PredicateObjectMap_c6d642b4-c70c-4af1-bfc1-5a1f83fae583 .
+
+km-dev:PredicateObjectMap_c6d642b4-c70c-4af1-bfc1-5a1f83fae583 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c6d642b4-c70c-4af1-bfc1-5a1f83fae583 .
+
+km-dev:PredicateObjectMap_bd69f0b3-e953-406d-a603-fa270d9dd8da rr:predicate dica:DICA_0000105 .
+
+_:node1edghlti0x6 rr:column "neoadjther" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#string" ;
+	km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x1 km-dev:hasObjectMap _:node1edghlti0x6 .
+
+km-dev:PredicateObjectMap_bd69f0b3-e953-406d-a603-fa270d9dd8da rr:objectMap _:node1edghlti0x6 .
+
+km-dev:TriplesMap_35d709d9-bce8-4731-ab30-745efc174841 rr:predicateObjectMap km-dev:PredicateObjectMap_bd69f0b3-e953-406d-a603-fa270d9dd8da .
+
+km-dev:PredicateObjectMap_bd69f0b3-e953-406d-a603-fa270d9dd8da a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_bd69f0b3-e953-406d-a603-fa270d9dd8da .
+
+km-dev:TriplesMap_36efee41-6d6f-49c9-9b0b-aaaf0881ce90 a rr:TriplesMap .
+
+_:node1edghlti0x1 km-dev:hasTriplesMap km-dev:TriplesMap_36efee41-6d6f-49c9-9b0b-aaaf0881ce90 .
+
+km-dev:TriplesMap_36efee41-6d6f-49c9-9b0b-aaaf0881ce90 km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x7 rr:tableName "NBCA - episode.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x1 km-dev:hasLogicalTable _:node1edghlti0x7 .
+
+km-dev:TriplesMap_36efee41-6d6f-49c9-9b0b-aaaf0881ce90 rr:logicalTable _:node1edghlti0x7 ;
+	rr:subjectMap _:node1edghlti0x8 .
+
+_:node1edghlti0x1 km-dev:hasSubjectMap _:node1edghlti0x8 .
+
+_:node1edghlti0x8 km-dev:isPartOfMapping _:node1edghlti0x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://purl.obolibrary.org/oca/OCA_00000471" ;
+	rr:class oca1:OCA_0000047 ;
+	rr:template "{tumor_uri}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_b04d5c25-120c-46b9-b7ef-51674b8698dd rr:predicate obo:RO_0000056 .
+
+km-dev:RefObjectMap_cb86f9f4-d432-4a4b-a8fe-bda02dfb2d57 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_35d709d9-bce8-4731-ab30-745efc174841 ;
+	km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x1 km-dev:hasObjectMap km-dev:RefObjectMap_cb86f9f4-d432-4a4b-a8fe-bda02dfb2d57 .
+
+km-dev:PredicateObjectMap_b04d5c25-120c-46b9-b7ef-51674b8698dd rr:objectMap km-dev:RefObjectMap_cb86f9f4-d432-4a4b-a8fe-bda02dfb2d57 .
+
+km-dev:TriplesMap_36efee41-6d6f-49c9-9b0b-aaaf0881ce90 rr:predicateObjectMap km-dev:PredicateObjectMap_b04d5c25-120c-46b9-b7ef-51674b8698dd .
+
+km-dev:PredicateObjectMap_b04d5c25-120c-46b9-b7ef-51674b8698dd a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1edghlti0x1 .
+
+_:node1edghlti0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b04d5c25-120c-46b9-b7ef-51674b8698dd .

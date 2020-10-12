@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/oca" uri="Ontology%20for%20Clinical%20Auditing.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1602488445172" name="http://fair.dica.nl/oca" uri="Ontology%20for%20Clinical%20Auditing.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1602488445172" name="duplicate:http://purl.obolibrary.org/obo/bfo.owl" uri="bfo-classes-minimal.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1602488445172" name="duplicate:http://purl.obolibrary.org/obo/bfo.owl" uri="bfo_classes_only.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1602488445172" name="http://purl.obolibrary.org/obo/ro/core.owl" uri="core.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1602488445172" name="http://purl.obolibrary.org/oca/dica" uri="DICA%20ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1602488445172" name="http://www.w3.org/2002/07/owl" uri="bfo-axioms.owl"/>
+    </group>
+</catalog>

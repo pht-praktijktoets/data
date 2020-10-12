@@ -1,0 +1,764 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix dica: <http://purl.obolibrary.org/oca/dica/> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix icd10: <http://purl.bioontology.org/ontology/ICD10/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix oca: <http://fair.dica.nl/oca/> .
+@prefix oca1: <http://purl.obolibrary.org/oca/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1edghb3tix1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "NBCA - patient.csv" ;
+	km-dev:modelPublicationTime "1595061669810"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"idcode\"}],[{\"columnName\":\"episode\"}],[{\"columnName\":\"ovldat\"}],[{\"columnName\":\"pcode\"}],[{\"columnName\":\"naam\"}],[{\"columnName\":\"geslacht\"}],[{\"columnName\":\"gebdat\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"person_id\"}],[{\"columnName\":\"ovldat\"}],[{\"columnName\":\"pcode\"}],[{\"columnName\":\"episode_uri\"}],[{\"columnName\":\"naam\"}],[{\"columnName\":\"geslacht\"}],[{\"columnName\":\"gebdat\"}]]" ;
+	km-dev:hasModelLabel "NBCA - patient.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"idcode\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"person_id\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"value = getValue(\\\"idcode\\\")\\nif value:\\n    return 'http://data.dica.nl/person/' + value\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"idcode\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"person_id\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"episode\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"episode_uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"value = getValue(\\\"episode\\\")\\nif value:\\n    return 'http://data.dica.nl/nbca/edisode/' + value\\n\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"episode\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"episode_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"person_id\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://purl.obolibrary.org/oca/OCA_0000004\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://purl.obolibrary.org/oca/OCA_00000041\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/OCA_0000004\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/OCA_00000041\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"oca1:OCA_00000041 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"person_id\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"person_id\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"naam\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/OCA_0000004\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/OCA_00000041\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://purl.obolibrary.org/oca/OCA_0000048\",
+                    \"DomainLabel\": \"oca1:OCA_00000041\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:string\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"naam\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"naam\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"pcode\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/OCA_0000004\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/OCA_00000041\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://purl.obolibrary.org/oca/dica/DICA_0000100\",
+                    \"DomainLabel\": \"oca1:OCA_00000041\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:string\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"pcode\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"pcode\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"gebdat\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/OCA_0000004\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/OCA_00000041\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://purl.obolibrary.org/oca/OCA_0000020\",
+                    \"DomainLabel\": \"oca1:OCA_00000041\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:date\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"gebdat\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"gebdat\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ovldat\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/OCA_0000004\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/OCA_00000041\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://purl.obolibrary.org/oca/OCA_0000007\",
+                    \"DomainLabel\": \"oca1:OCA_00000041\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:date\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ovldat\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ovldat\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"episode_uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://purl.obolibrary.org/oca/dica/DICA_0000102\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://purl.obolibrary.org/oca/dica/DICA_00001021\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/dica/DICA_0000102\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/dica/DICA_00001021\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"dica:DICA_00001021 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"episode_uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"episode_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"geslacht\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://purl.obolibrary.org/oca/OCA_0000004\",
+                    \"DomainId\": \"http://purl.obolibrary.org/oca/OCA_00000041\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://purl.obolibrary.org/oca/dica/DICA_0000011\",
+                    \"DomainLabel\": \"oca1:OCA_00000041\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:string\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"geslacht\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"geslacht\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://purl.obolibrary.org/oca/dica/DICA_00001021\",
+                    \"edgeId\": \"http://purl.obolibrary.org/obo/RO_0000056\",
+                    \"edgeTargetUri\": \"http://purl.obolibrary.org/oca/dica/DICA_0000102\",
+                    \"edgeSourceId\": \"http://purl.obolibrary.org/oca/OCA_00000041\",
+                    \"edgeSourceUri\": \"http://purl.obolibrary.org/oca/OCA_0000004\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_e93d6578-51ee-4e05-a644-4d1fd32288a1 a rr:TriplesMap .
+
+_:node1edghb3tix1 km-dev:hasTriplesMap km-dev:TriplesMap_e93d6578-51ee-4e05-a644-4d1fd32288a1 .
+
+km-dev:TriplesMap_e93d6578-51ee-4e05-a644-4d1fd32288a1 km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix2 rr:tableName "NBCA - patient.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasLogicalTable _:node1edghb3tix2 .
+
+km-dev:TriplesMap_e93d6578-51ee-4e05-a644-4d1fd32288a1 rr:logicalTable _:node1edghb3tix2 ;
+	rr:subjectMap _:node1edghb3tix3 .
+
+_:node1edghb3tix1 km-dev:hasSubjectMap _:node1edghb3tix3 .
+
+_:node1edghb3tix3 km-dev:isPartOfMapping _:node1edghb3tix1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://purl.obolibrary.org/oca/OCA_00000041" ;
+	rr:class oca1:OCA_0000004 ;
+	rr:template "{person_id}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_47c3ed58-27cb-44b9-9c84-ca3a51f9c843 rr:predicate oca1:OCA_0000048 .
+
+_:node1edghb3tix4 rr:column "naam" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#string" ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasObjectMap _:node1edghb3tix4 .
+
+km-dev:PredicateObjectMap_47c3ed58-27cb-44b9-9c84-ca3a51f9c843 rr:objectMap _:node1edghb3tix4 .
+
+km-dev:TriplesMap_e93d6578-51ee-4e05-a644-4d1fd32288a1 rr:predicateObjectMap km-dev:PredicateObjectMap_47c3ed58-27cb-44b9-9c84-ca3a51f9c843 .
+
+km-dev:PredicateObjectMap_47c3ed58-27cb-44b9-9c84-ca3a51f9c843 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_47c3ed58-27cb-44b9-9c84-ca3a51f9c843 .
+
+km-dev:PredicateObjectMap_f8bf3f80-638c-47c0-9799-ce2aa6b1cc93 rr:predicate dica:DICA_0000100 .
+
+_:node1edghb3tix5 rr:column "pcode" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#string" ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasObjectMap _:node1edghb3tix5 .
+
+km-dev:PredicateObjectMap_f8bf3f80-638c-47c0-9799-ce2aa6b1cc93 rr:objectMap _:node1edghb3tix5 .
+
+km-dev:TriplesMap_e93d6578-51ee-4e05-a644-4d1fd32288a1 rr:predicateObjectMap km-dev:PredicateObjectMap_f8bf3f80-638c-47c0-9799-ce2aa6b1cc93 .
+
+km-dev:PredicateObjectMap_f8bf3f80-638c-47c0-9799-ce2aa6b1cc93 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f8bf3f80-638c-47c0-9799-ce2aa6b1cc93 .
+
+km-dev:PredicateObjectMap_cf7d6dfc-c760-4ddf-afa8-502f98895628 rr:predicate oca1:OCA_0000020 .
+
+_:node1edghb3tix6 rr:column "gebdat" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#date" ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasObjectMap _:node1edghb3tix6 .
+
+km-dev:PredicateObjectMap_cf7d6dfc-c760-4ddf-afa8-502f98895628 rr:objectMap _:node1edghb3tix6 .
+
+km-dev:TriplesMap_e93d6578-51ee-4e05-a644-4d1fd32288a1 rr:predicateObjectMap km-dev:PredicateObjectMap_cf7d6dfc-c760-4ddf-afa8-502f98895628 .
+
+km-dev:PredicateObjectMap_cf7d6dfc-c760-4ddf-afa8-502f98895628 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_cf7d6dfc-c760-4ddf-afa8-502f98895628 .
+
+km-dev:PredicateObjectMap_40a4e8ad-2e17-4918-8539-5162f07c404b rr:predicate oca1:OCA_0000007 .
+
+_:node1edghb3tix7 rr:column "ovldat" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#date" ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasObjectMap _:node1edghb3tix7 .
+
+km-dev:PredicateObjectMap_40a4e8ad-2e17-4918-8539-5162f07c404b rr:objectMap _:node1edghb3tix7 .
+
+km-dev:TriplesMap_e93d6578-51ee-4e05-a644-4d1fd32288a1 rr:predicateObjectMap km-dev:PredicateObjectMap_40a4e8ad-2e17-4918-8539-5162f07c404b .
+
+km-dev:PredicateObjectMap_40a4e8ad-2e17-4918-8539-5162f07c404b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_40a4e8ad-2e17-4918-8539-5162f07c404b .
+
+km-dev:PredicateObjectMap_c74c66dd-da03-498f-a451-c02308cd3572 rr:predicate obo:RO_0000056 .
+
+km-dev:RefObjectMap_2a8bc103-b207-4d73-86a2-75177f23e52f a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_dca6984b-9a0e-4990-88a5-7ae053598d31 ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasObjectMap km-dev:RefObjectMap_2a8bc103-b207-4d73-86a2-75177f23e52f .
+
+km-dev:PredicateObjectMap_c74c66dd-da03-498f-a451-c02308cd3572 rr:objectMap km-dev:RefObjectMap_2a8bc103-b207-4d73-86a2-75177f23e52f .
+
+km-dev:TriplesMap_e93d6578-51ee-4e05-a644-4d1fd32288a1 rr:predicateObjectMap km-dev:PredicateObjectMap_c74c66dd-da03-498f-a451-c02308cd3572 .
+
+km-dev:PredicateObjectMap_c74c66dd-da03-498f-a451-c02308cd3572 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c74c66dd-da03-498f-a451-c02308cd3572 .
+
+km-dev:PredicateObjectMap_f1dcab9f-39f5-4caf-ad5e-e2cb77b47ad4 rr:predicate dica:DICA_0000011 .
+
+_:node1edghb3tix8 rr:column "geslacht" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#string" ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasObjectMap _:node1edghb3tix8 .
+
+km-dev:PredicateObjectMap_f1dcab9f-39f5-4caf-ad5e-e2cb77b47ad4 rr:objectMap _:node1edghb3tix8 .
+
+km-dev:TriplesMap_e93d6578-51ee-4e05-a644-4d1fd32288a1 rr:predicateObjectMap km-dev:PredicateObjectMap_f1dcab9f-39f5-4caf-ad5e-e2cb77b47ad4 .
+
+km-dev:PredicateObjectMap_f1dcab9f-39f5-4caf-ad5e-e2cb77b47ad4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f1dcab9f-39f5-4caf-ad5e-e2cb77b47ad4 .
+
+km-dev:TriplesMap_dca6984b-9a0e-4990-88a5-7ae053598d31 a rr:TriplesMap .
+
+_:node1edghb3tix1 km-dev:hasTriplesMap km-dev:TriplesMap_dca6984b-9a0e-4990-88a5-7ae053598d31 .
+
+km-dev:TriplesMap_dca6984b-9a0e-4990-88a5-7ae053598d31 km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix9 rr:tableName "NBCA - patient.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1edghb3tix1 .
+
+_:node1edghb3tix1 km-dev:hasLogicalTable _:node1edghb3tix9 .
+
+km-dev:TriplesMap_dca6984b-9a0e-4990-88a5-7ae053598d31 rr:logicalTable _:node1edghb3tix9 ;
+	rr:subjectMap _:node1edghb3tix10 .
+
+_:node1edghb3tix1 km-dev:hasSubjectMap _:node1edghb3tix10 .
+
+_:node1edghb3tix10 km-dev:isPartOfMapping _:node1edghb3tix1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://purl.obolibrary.org/oca/dica/DICA_00001021" ;
+	rr:class dica:DICA_0000102 ;
+	rr:template "{episode_uri}" .
