@@ -1,0 +1,24 @@
+<http://data.nhr.nl/persoon/YkWh+Mexu1K4Uqt86skY27RJKAZZ1SHZqd0IJkdrB+wX75kPiyu3CudfOBfcv3eU8FIj8PAtfOn3FKfHKoO3Eg==> <http://onto.nhr.nl#ondergaat_interventie> _:PCI1_810cfa533efdeb73b8e525f31b77bf815e7728a6_N766 .
+<http://data.nhr.nl/persoon/YkWh+Mexu1K4Uqt86skY27RJKAZZ1SHZqd0IJkdrB+wX75kPiyu3CudfOBfcv3eU8FIj8PAtfOn3FKfHKoO3Eg==> <http://onto.nhr.nl#heeft_geslacht> "1" .
+<http://data.nhr.nl/persoon/YkWh+Mexu1K4Uqt86skY27RJKAZZ1SHZqd0IJkdrB+wX75kPiyu3CudfOBfcv3eU8FIj8PAtfOn3FKfHKoO3Eg==> <http://onto.nhr.nl#heeft_geboortedatum> "1970-11-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.nhr.nl/persoon/YkWh+Mexu1K4Uqt86skY27RJKAZZ1SHZqd0IJkdrB+wX75kPiyu3CudfOBfcv3eU8FIj8PAtfOn3FKfHKoO3Eg==> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://onto.nhr.nl#Persoon> .
+_:PCI1_810cfa533efdeb73b8e525f31b77bf815e7728a6_N766 <http://onto.nhr.nl#heeft_interventiedatum> "2020-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.nhr.nl/persoon/YkWh+Mexu1K4Uqt86skY27RJKAZZ1SHZqd0IJkdrB+wX75kPiyu3CudfOBfcv3eU8FIj8PAtfOn3FKfHKoO3Eg==> <http://www.w3.org/2000/01/rdf-schema#label> "YkWh+Mexu1K4Uqt86skY27RJKAZZ1SHZqd0IJkdrB+wX75kPiyu3CudfOBfcv3eU8FIj8PAtfOn3FKfHKoO3Eg==" .
+_:PCI1_810cfa533efdeb73b8e525f31b77bf815e7728a6_N766 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://onto.nhr.nl#PCI> .
+
+<http://data.nhr.nl/persoon/P/bhT6RQosv6WK9tBm4whYqI7ydBHGY8BcEnU3nF0B4ERZ7ZCp4uPQK9KdY03Qcq3QY4S4fpVXMbcStmTQUhXQ==> <http://onto.nhr.nl#heeft_geslacht> "2" .
+<http://data.nhr.nl/persoon/P/bhT6RQosv6WK9tBm4whYqI7ydBHGY8BcEnU3nF0B4ERZ7ZCp4uPQK9KdY03Qcq3QY4S4fpVXMbcStmTQUhXQ==> <http://onto.nhr.nl#ondergaat_interventie> _:PCI1_b739a256c4400c56c3c853020d221a97327a2673_N771 .
+<http://data.nhr.nl/persoon/P/bhT6RQosv6WK9tBm4whYqI7ydBHGY8BcEnU3nF0B4ERZ7ZCp4uPQK9KdY03Qcq3QY4S4fpVXMbcStmTQUhXQ==> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://onto.nhr.nl#Persoon> .
+_:PCI1_b739a256c4400c56c3c853020d221a97327a2673_N771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://onto.nhr.nl#PCI> .
+_:PCI1_b739a256c4400c56c3c853020d221a97327a2673_N771 <http://onto.nhr.nl#heeft_interventiedatum> "2020-01-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.nhr.nl/persoon/P/bhT6RQosv6WK9tBm4whYqI7ydBHGY8BcEnU3nF0B4ERZ7ZCp4uPQK9KdY03Qcq3QY4S4fpVXMbcStmTQUhXQ==> <http://onto.nhr.nl#heeft_geboortedatum> "1970-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.nhr.nl/persoon/P/bhT6RQosv6WK9tBm4whYqI7ydBHGY8BcEnU3nF0B4ERZ7ZCp4uPQK9KdY03Qcq3QY4S4fpVXMbcStmTQUhXQ==> <http://www.w3.org/2000/01/rdf-schema#label> "P/bhT6RQosv6WK9tBm4whYqI7ydBHGY8BcEnU3nF0B4ERZ7ZCp4uPQK9KdY03Qcq3QY4S4fpVXMbcStmTQUhXQ==" .
+
+_:PCI1_c1c6f66b190a5cc1c99b7e272b26ee6f0c7c5dc3_N776 <http://onto.nhr.nl#heeft_interventiedatum> "2020-01-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:PCI1_c1c6f66b190a5cc1c99b7e272b26ee6f0c7c5dc3_N776 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://onto.nhr.nl#PCI> .
+<http://data.nhr.nl/persoon/CdHZ7mfOevEPohq8prOpZ7Fdy372vLT3LH0gphbSvzfvwif2Ix2QqWGWWC+hzZiXd9SUjPYYK8ovAHvLuiZouw==> <http://www.w3.org/2000/01/rdf-schema#label> "CdHZ7mfOevEPohq8prOpZ7Fdy372vLT3LH0gphbSvzfvwif2Ix2QqWGWWC+hzZiXd9SUjPYYK8ovAHvLuiZouw==" .
+<http://data.nhr.nl/persoon/CdHZ7mfOevEPohq8prOpZ7Fdy372vLT3LH0gphbSvzfvwif2Ix2QqWGWWC+hzZiXd9SUjPYYK8ovAHvLuiZouw==> <http://onto.nhr.nl#ondergaat_interventie> _:PCI1_c1c6f66b190a5cc1c99b7e272b26ee6f0c7c5dc3_N776 .
+<http://data.nhr.nl/persoon/CdHZ7mfOevEPohq8prOpZ7Fdy372vLT3LH0gphbSvzfvwif2Ix2QqWGWWC+hzZiXd9SUjPYYK8ovAHvLuiZouw==> <http://onto.nhr.nl#heeft_geboortedatum> "1970-12-31"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.nhr.nl/persoon/CdHZ7mfOevEPohq8prOpZ7Fdy372vLT3LH0gphbSvzfvwif2Ix2QqWGWWC+hzZiXd9SUjPYYK8ovAHvLuiZouw==> <http://onto.nhr.nl#heeft_geslacht> "-2" .
+<http://data.nhr.nl/persoon/CdHZ7mfOevEPohq8prOpZ7Fdy372vLT3LH0gphbSvzfvwif2Ix2QqWGWWC+hzZiXd9SUjPYYK8ovAHvLuiZouw==> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://onto.nhr.nl#Persoon> .
+

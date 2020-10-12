@@ -1,0 +1,598 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1eitgjcivx1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "NHR_PCI.txt" ;
+	km-dev:modelPublicationTime "1600865808991"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"geb_datum\"}],[{\"columnName\":\"geslacht\"}],[{\"columnName\":\"interv_datum\"}],[{\"columnName\":\"geb_naam\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"geb_datum\"}],[{\"columnName\":\"persoon_uri\"}],[{\"columnName\":\"geslacht\"}],[{\"columnName\":\"interv_datum\"}],[{\"columnName\":\"geb_naam\"}]]" ;
+	km-dev:hasModelLabel "NHR_PCI.txt" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"geb_naam\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"persoon_uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return 'http://data.nhr.nl/persoon/' + getValue(\\\"geb_naam\\\")\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"geb_naam\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"persoon_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"interv_datum\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"interv_datum\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"value = getValue(\\\"interv_datum\\\")\\nreturn value[:5] + '0' + value [5:7] + '0' + value [-1:]\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"interv_datum\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"interv_datum\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"geb_naam\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://onto.nhr.nl#Persoon\",
+                    \"DomainId\": \"http://onto.nhr.nl#Persoon1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"http://onto.nhr.nl#Persoon/Persoon1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"geb_naam\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"geb_naam\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"persoon_uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://onto.nhr.nl#Persoon\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://onto.nhr.nl#Persoon1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://onto.nhr.nl#Persoon\",
+                    \"DomainId\": \"http://onto.nhr.nl#Persoon1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://onto.nhr.nl#Persoon/Persoon1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"persoon_uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"persoon_uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"geb_datum\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://onto.nhr.nl#Persoon\",
+                    \"DomainId\": \"http://onto.nhr.nl#Persoon1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://onto.nhr.nl#heeft_geboortedatum\",
+                    \"DomainLabel\": \"http://onto.nhr.nl#Persoon/Persoon1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:date\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"geb_datum\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"geb_datum\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"geslacht\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://onto.nhr.nl#Persoon\",
+                    \"DomainId\": \"http://onto.nhr.nl#Persoon1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://onto.nhr.nl#heeft_geslacht\",
+                    \"DomainLabel\": \"http://onto.nhr.nl#Persoon/Persoon1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"geslacht\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"geslacht\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"interv_datum\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://onto.nhr.nl#PCI\",
+                    \"DomainId\": \"http://onto.nhr.nl#PCI1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://onto.nhr.nl#heeft_interventiedatum\",
+                    \"DomainLabel\": \"http://onto.nhr.nl#PCI/PCI1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:date\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"interv_datum\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"interv_datum\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://onto.nhr.nl#PCI1\",
+                    \"edgeId\": \"http://onto.nhr.nl#ondergaat_interventie\",
+                    \"edgeTargetUri\": \"http://onto.nhr.nl#PCI\",
+                    \"edgeSourceId\": \"http://onto.nhr.nl#Persoon1\",
+                    \"edgeSourceUri\": \"http://onto.nhr.nl#Persoon\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_94b932b3-9113-45d9-bff4-f976a668b7f7 a rr:TriplesMap .
+
+_:node1eitgjcivx1 km-dev:hasTriplesMap km-dev:TriplesMap_94b932b3-9113-45d9-bff4-f976a668b7f7 .
+
+km-dev:TriplesMap_94b932b3-9113-45d9-bff4-f976a668b7f7 km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx2 rr:tableName "NHR_PCI.txt" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasLogicalTable _:node1eitgjcivx2 .
+
+km-dev:TriplesMap_94b932b3-9113-45d9-bff4-f976a668b7f7 rr:logicalTable _:node1eitgjcivx2 ;
+	rr:subjectMap _:node1eitgjcivx3 .
+
+_:node1eitgjcivx1 km-dev:hasSubjectMap _:node1eitgjcivx3 .
+
+_:node1eitgjcivx3 km-dev:isPartOfMapping _:node1eitgjcivx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://onto.nhr.nl#Persoon1" ;
+	rr:class <http://onto.nhr.nl#Persoon> ;
+	rr:template "{persoon_uri}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_6de1e697-4ec3-46ca-a8ab-f093d3cc6563 rr:predicate <http://onto.nhr.nl#ondergaat_interventie> .
+
+km-dev:RefObjectMap_fd6f8374-c3e6-4196-840d-e9b2487d7186 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_9d167e9d-17ca-4432-88a8-6b8b71070557 ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasObjectMap km-dev:RefObjectMap_fd6f8374-c3e6-4196-840d-e9b2487d7186 .
+
+km-dev:PredicateObjectMap_6de1e697-4ec3-46ca-a8ab-f093d3cc6563 rr:objectMap km-dev:RefObjectMap_fd6f8374-c3e6-4196-840d-e9b2487d7186 .
+
+km-dev:TriplesMap_94b932b3-9113-45d9-bff4-f976a668b7f7 rr:predicateObjectMap km-dev:PredicateObjectMap_6de1e697-4ec3-46ca-a8ab-f093d3cc6563 .
+
+km-dev:PredicateObjectMap_6de1e697-4ec3-46ca-a8ab-f093d3cc6563 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_6de1e697-4ec3-46ca-a8ab-f093d3cc6563 .
+
+km-dev:PredicateObjectMap_65b77a22-e102-4b7c-aed5-1e95020a2164 rr:predicate rdfs:label .
+
+_:node1eitgjcivx4 rr:column "geb_naam" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasObjectMap _:node1eitgjcivx4 .
+
+km-dev:PredicateObjectMap_65b77a22-e102-4b7c-aed5-1e95020a2164 rr:objectMap _:node1eitgjcivx4 .
+
+km-dev:TriplesMap_94b932b3-9113-45d9-bff4-f976a668b7f7 rr:predicateObjectMap km-dev:PredicateObjectMap_65b77a22-e102-4b7c-aed5-1e95020a2164 .
+
+km-dev:PredicateObjectMap_65b77a22-e102-4b7c-aed5-1e95020a2164 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_65b77a22-e102-4b7c-aed5-1e95020a2164 .
+
+km-dev:PredicateObjectMap_f7094ee4-75e2-46e8-9637-a1cb150608ce rr:predicate <http://onto.nhr.nl#heeft_geslacht> .
+
+_:node1eitgjcivx5 rr:column "geslacht" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasObjectMap _:node1eitgjcivx5 .
+
+km-dev:PredicateObjectMap_f7094ee4-75e2-46e8-9637-a1cb150608ce rr:objectMap _:node1eitgjcivx5 .
+
+km-dev:TriplesMap_94b932b3-9113-45d9-bff4-f976a668b7f7 rr:predicateObjectMap km-dev:PredicateObjectMap_f7094ee4-75e2-46e8-9637-a1cb150608ce .
+
+km-dev:PredicateObjectMap_f7094ee4-75e2-46e8-9637-a1cb150608ce a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f7094ee4-75e2-46e8-9637-a1cb150608ce .
+
+km-dev:PredicateObjectMap_8b4808ba-b933-4aec-b060-2d5357f9a6fa rr:predicate <http://onto.nhr.nl#heeft_geboortedatum> .
+
+_:node1eitgjcivx6 rr:column "geb_datum" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#date" ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasObjectMap _:node1eitgjcivx6 .
+
+km-dev:PredicateObjectMap_8b4808ba-b933-4aec-b060-2d5357f9a6fa rr:objectMap _:node1eitgjcivx6 .
+
+km-dev:TriplesMap_94b932b3-9113-45d9-bff4-f976a668b7f7 rr:predicateObjectMap km-dev:PredicateObjectMap_8b4808ba-b933-4aec-b060-2d5357f9a6fa .
+
+km-dev:PredicateObjectMap_8b4808ba-b933-4aec-b060-2d5357f9a6fa a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_8b4808ba-b933-4aec-b060-2d5357f9a6fa .
+
+km-dev:TriplesMap_9d167e9d-17ca-4432-88a8-6b8b71070557 a rr:TriplesMap .
+
+_:node1eitgjcivx1 km-dev:hasTriplesMap km-dev:TriplesMap_9d167e9d-17ca-4432-88a8-6b8b71070557 .
+
+km-dev:TriplesMap_9d167e9d-17ca-4432-88a8-6b8b71070557 km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx7 rr:tableName "NHR_PCI.txt" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasLogicalTable _:node1eitgjcivx7 .
+
+km-dev:TriplesMap_9d167e9d-17ca-4432-88a8-6b8b71070557 rr:logicalTable _:node1eitgjcivx7 ;
+	rr:subjectMap _:node1eitgjcivx8 .
+
+_:node1eitgjcivx1 km-dev:hasSubjectMap _:node1eitgjcivx8 .
+
+_:node1eitgjcivx8 km-dev:isPartOfMapping _:node1eitgjcivx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://onto.nhr.nl#PCI1" ;
+	rr:class <http://onto.nhr.nl#PCI> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "PCI1" .
+
+km-dev:PredicateObjectMap_200debba-f439-4ece-a552-668a6577da77 rr:predicate <http://onto.nhr.nl#heeft_interventiedatum> .
+
+_:node1eitgjcivx9 rr:column "interv_datum" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#date" ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasObjectMap _:node1eitgjcivx9 .
+
+km-dev:PredicateObjectMap_200debba-f439-4ece-a552-668a6577da77 rr:objectMap _:node1eitgjcivx9 .
+
+km-dev:TriplesMap_9d167e9d-17ca-4432-88a8-6b8b71070557 rr:predicateObjectMap km-dev:PredicateObjectMap_200debba-f439-4ece-a552-668a6577da77 .
+
+km-dev:PredicateObjectMap_200debba-f439-4ece-a552-668a6577da77 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1eitgjcivx1 .
+
+_:node1eitgjcivx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_200debba-f439-4ece-a552-668a6577da77 .

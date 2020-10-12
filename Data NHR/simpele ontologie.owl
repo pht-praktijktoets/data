@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://onto.nhr.nl#"
+     xml:base="http://onto.nhr.nl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://onto.nhr.nl#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://onto.nhr.nl#heeft_rol -->
+
+    <owl:ObjectProperty rdf:about="http://onto.nhr.nl#heeft_rol">
+        <owl:inverseOf rdf:resource="http://onto.nhr.nl#rol_van"/>
+        <rdfs:domain rdf:resource="http://onto.nhr.nl#Persoon"/>
+        <rdfs:range rdf:resource="http://onto.nhr.nl#Rol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://onto.nhr.nl#ondergaat_interventie -->
+
+    <owl:ObjectProperty rdf:about="http://onto.nhr.nl#ondergaat_interventie">
+        <rdfs:domain rdf:resource="http://onto.nhr.nl#Persoon"/>
+        <rdfs:range rdf:resource="http://onto.nhr.nl#Interventie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://onto.nhr.nl#rol_van -->
+
+    <owl:ObjectProperty rdf:about="http://onto.nhr.nl#rol_van">
+        <rdfs:domain rdf:resource="http://onto.nhr.nl#Rol"/>
+        <rdfs:range rdf:resource="http://onto.nhr.nl#Persoon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://onto.nhr.nl#heeft_geboortedatum -->
+
+    <owl:DatatypeProperty rdf:about="http://onto.nhr.nl#heeft_geboortedatum"/>
+    
+
+
+    <!-- http://onto.nhr.nl#heeft_geslacht -->
+
+    <owl:DatatypeProperty rdf:about="http://onto.nhr.nl#heeft_geslacht"/>
+    
+
+
+    <!-- http://onto.nhr.nl#heeft_interventiedatum -->
+
+    <owl:DatatypeProperty rdf:about="http://onto.nhr.nl#heeft_interventiedatum"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://onto.nhr.nl#CABG -->
+
+    <owl:Class rdf:about="http://onto.nhr.nl#CABG">
+        <rdfs:subClassOf rdf:resource="http://onto.nhr.nl#Interventie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.nhr.nl#Interventie -->
+
+    <owl:Class rdf:about="http://onto.nhr.nl#Interventie"/>
+    
+
+
+    <!-- http://onto.nhr.nl#Man -->
+
+    <owl:Class rdf:about="http://onto.nhr.nl#Man">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://onto.nhr.nl#Persoon"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://onto.nhr.nl#heeft_geslacht"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.nhr.nl#PCI -->
+
+    <owl:Class rdf:about="http://onto.nhr.nl#PCI">
+        <rdfs:subClassOf rdf:resource="http://onto.nhr.nl#Interventie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.nhr.nl#Patient -->
+
+    <owl:Class rdf:about="http://onto.nhr.nl#Patient">
+        <rdfs:subClassOf rdf:resource="http://onto.nhr.nl#Rol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.nhr.nl#Persoon -->
+
+    <owl:Class rdf:about="http://onto.nhr.nl#Persoon"/>
+    
+
+
+    <!-- http://onto.nhr.nl#Rol -->
+
+    <owl:Class rdf:about="http://onto.nhr.nl#Rol"/>
+    
+
+
+    <!-- http://onto.nhr.nl#Specialist -->
+
+    <owl:Class rdf:about="http://onto.nhr.nl#Specialist">
+        <rdfs:subClassOf rdf:resource="http://onto.nhr.nl#Zorgverlener"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.nhr.nl#Vrouw -->
+
+    <owl:Class rdf:about="http://onto.nhr.nl#Vrouw">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://onto.nhr.nl#Persoon"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://onto.nhr.nl#heeft_geslacht"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.nhr.nl#Zorgverlener -->
+
+    <owl:Class rdf:about="http://onto.nhr.nl#Zorgverlener">
+        <rdfs:subClassOf rdf:resource="http://onto.nhr.nl#Rol"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
